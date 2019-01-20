@@ -29,10 +29,7 @@ class ContactController extends Controller
 
         return view('thank-you');
 
-       
-       
-
-      //  Mail::to("davidrothkopf1@gmail.com")->send(new ContactEmail($request));
+        Mail::to("drothhello@gmail.com")->send(new ContactEmail($request));
     
 
         // Mail delivery logic goes here

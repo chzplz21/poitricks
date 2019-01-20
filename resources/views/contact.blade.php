@@ -2,6 +2,18 @@
 
 @section('content')
 
+
+@if(count($errors))
+  <div class="alert alert-danger" role="alert">
+    @foreach ($errors->all() as $error)
+      {{$error}}
+      <br>
+    @endforeach
+
+  </div>
+
+@endif
+
   <h1>contact</h1>
 
   <form method = "post">
@@ -22,10 +34,6 @@
         </div>
       </form>
 
-      @foreach ($errors->all() as $error)
-        {{$error}}
-
-      @endforeach
 
 
 @endsection
