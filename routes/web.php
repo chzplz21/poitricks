@@ -13,6 +13,13 @@
 
 
 Route::get('/', 'HomePage@getStarted');
+Route::get('/about', 'NavController@about');
+Route::get('/contact', 'ContactController@create');
+Route::post('/contact', 'ContactController@store');
+
+Route::get('/thank-you', 'NavController@thankYou');
+
+
 Route::get('/tricks/{trick}', 'trickController@start');
 
 

@@ -4,6 +4,7 @@ namespace App\Http\ViewComposers;
 
 use Illuminate\View\View;
 use App\trickNames;
+use DB;
 
 //View Composer Called on Every Request
 
@@ -13,8 +14,9 @@ class AppComposer {
 
     
         //Gets tricks array of all trick to put in sidebar
-        $tricks = trickNames::all();
+        $tricks = trickNames::orderBy('trickName')->get();
 
+    
         //Gets incoming path
         $url = $_SERVER["REQUEST_URI"];
 
@@ -34,7 +36,7 @@ class AppComposer {
 
         }
 
-        echo '<pre>' . var_export($url, true) . '</pre>';
+      //  echo '<pre>' . var_export($url, true) . '</pre>';
 
         //Arranges beginner and advanced trick arrays
         $returnArray = $this->arrangeTrickArray($url, $tricks);
@@ -61,6 +63,7 @@ class AppComposer {
             //Temp array
             $tempArray["trickName"] = $trick->trickName;
             $tempArray["url"] = $trick->url;
+            $tempArray["order"] = $trick->order;
           
             if ($trick->trick_difficulty == 1) {
                 $beginnerArray[] = $tempArray; 
@@ -70,38 +73,59 @@ class AppComposer {
         
         }
 
-       $beginnerArray =  $this->makeBeginnerOrder($beginnerArray);
 
+      
+      $beginnerArray =  $this->makeBeginnerOrder($beginnerArray);
+    
         $returnArray = [$beginnerArray, $advancedArray];
         return $returnArray;
 
     }
 
-    //Constructs order of tricks
+      //sorts beginner tricks by order
     private function makeBeginnerOrder($beginnerArray) {
+      
+        uasort($beginnerArray, function($a, $b){
+            return ($a["order"] < $b["order"]) ? -1 : 1;
+          
+        });
 
+        return $beginnerArray;
+    }
+
+    
+       
+
+/*
         $order = array(
-            "Basic Planes",
-            "Timing and Direction",
-            "3 Beat Weave",
-            "Windmill",
-            "Chase The Sun",
-            "4 Beat Fountain",
-            "Butterfly",
-            "Extensions",
-            "Flowers (In Spin)",
-            "Turning",
-            "Pendulum",
-            "Stall Chaser"
+            "Wall Plane Flowers",
+            "Triquetra vs. Extension (Mercedes)",
+            "Crossers",
+            "Archer Weaves",
+            "Buzzsaw",
+            "Body Tracing Hybrid",
+            "Snakes",
+            "CAP",
+            "Isolation",
+            "Air Wraps",
+            "Meltdown",
+            "Triquetra vs. Static Spin",
+            "Tosses",
+            "Hyperloops",
+            "Zan's Diamond"
         );
 
         
         $newArray = [];
 
+        
+        $i = 1;
         foreach ($order as $orderTrick) {
             foreach ($beginnerArray as $array) {
                 if ($array["trickName"] == $orderTrick) {
+                   trickNames::makeOrder($array["trickName"], $i);
                     $newArray[] = $array;
+                    $i++;
                 }
             }
 
@@ -110,8 +134,10 @@ class AppComposer {
         //echo '<pre>' . var_export($newArray, true) . '</pre>';
         
         return $newArray;
+
+        */
         
-    }
+   
 
 
 

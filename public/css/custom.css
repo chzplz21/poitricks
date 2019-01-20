@@ -1,3 +1,157 @@
 #sideBar {
     border: solid black;
 }
+
+.navbar {
+ color: white  !important;
+/* opacity: 0.6 !important;*/
+ background-color: rgba(0,0,0,0.5) !important;
+ position: absolute;
+ top: 0;
+ width: 100%;
+}
+
+.navbar a {
+    color: white  !important;
+    
+   }
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+
+.jumbotron {
+    background-image: url("../images/poi2.jpg");
+    background-size: cover;
+   background-position: center; 
+    color: white;
+    height: auto;
+    font-weight: bold !important;
+    padding-bottom: 40px;
+    border-radius: 0 !important;
+   
+}
+
+body {
+    font-family: 'ZCOOL KuaiLe', cursive;
+}
+
+#sideBar {
+    /*background-color: #0325CD;*/
+    background-color: black !important;
+ 
+}
+
+#sideBar a{
+    
+    color: white;
+}
+
+.trickListShow {
+    display: block;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+.card-body {
+    height: 175px;
+  
+    overflow: hidden;
+
+}
+
+
+.read-more{
+    position: absolute; 
+  bottom: 0; 
+  left: 0;
+  width: 100%; 
+  text-align: center; 
+  margin: 0; padding: 30px 0; 
+	
+  /* "transparent" only works here because == rgba(0,0,0,0) */
+  background-image: linear-gradient(to bottom, transparent, black);
+
+
+}
+
+
+.card:hover {
+    border: solid #067FD3
+}
+
+
+.fa.fa-navicon {
+    color:white;
+  } 
+
+
+  .trickTitle {
+      display: inline-block;
+      font-size: 22px;
+      color: white;
+  } 
+
+  .trickToggle{
+      display: none;
+      float: right;
+  }
+
+ h1 {
+     font-size: 40px !important;
+ }
+
+@media only screen and (max-width: 1240px) {
+
+
+  
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+    .trickListContainer:hover {
+        cursor: pointer;
+    }
+
+
+    .trickToggle{
+        display: block;
+    }
+
+    .trickTitle {
+        font-size: 17px !important;
+    }
+
+    .hide {
+        display: none;
+    }
+
+
+    .jumbotron {
+        margin-bottom: 0;
+    }
+
+    .jumbotron h1 {
+    
+        margin-top: 50px;
+    }
+
+    h1 {
+        font-size: 25px !important;
+    }
+
+    .jumbotron .lead {
+        font-size: 14px;
+    }
+
+
+   
+
+
+
+
+}
