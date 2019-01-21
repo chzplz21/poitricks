@@ -12,7 +12,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="{{asset('js/custom.js')}}"></script>
    
-
+    <meta name="description" content="Poi Tricks Video Lessons">
+    <meta name="keywords" content="poi, tricks, lessons, tutorials, videos">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
 
@@ -26,7 +28,7 @@
       </div>
 
         <nav class="navbar navbar-absolute navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="/poitricks/public">poi trick lessons</a>
+                <a class="navbar-brand" href="/">poi trick lessons</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon">
                       <i class="fa fa-navicon"></i>
@@ -36,10 +38,10 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                      <a class="nav-link" href="/poitricks/public/about">about <span class="sr-only">(current)</span></a>
+                      <a class="nav-link" href="/about">about <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="/poitricks/public/contact">contact</a>
+                      <a class="nav-link" href="/contact">contact</a>
                     </li>
                   </ul>
                   

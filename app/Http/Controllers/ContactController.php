@@ -27,9 +27,11 @@ class ContactController extends Controller
             'msg' => 'required'
         ]);
 
+        Mail::to("drothhello@gmail.com")->send(new ContactEmail($request));
+
         return view('thank-you');
 
-        Mail::to("drothhello@gmail.com")->send(new ContactEmail($request));
+  
     
 
         // Mail delivery logic goes here

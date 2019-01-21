@@ -35,7 +35,11 @@
 
 body {
     font-family: 'ZCOOL KuaiLe', cursive;
-    color: purple;
+  
+}
+
+.btn-primary {
+    margin-top: 10px;
 }
 
 #sideBar {

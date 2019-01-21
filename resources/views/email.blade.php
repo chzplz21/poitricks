@@ -1,7 +1,13 @@
 Hey Friend you got an email from poitricks!
 
-Name: {{$name}}
+<br>
 
-Email: {{$email}}
+Name: {{$contact->name}}
 
-Message: {{$message}}
+<br>
+
+Email: {{$contact->email}}
+
+<br>
+
+Message: {{$contact->msg}}

@@ -20,16 +20,16 @@
       {{ csrf_field() }}
         <div class="form-group">
           <label for="exampleInputEmail1">Email address</label>
-          <input name = "email" class="form-control"  placeholder="Enter email" value="{{ old('email') }}">
+          <input name = "email" class="form-control"  placeholder="Email" value="{{ old('email') }}">
           
         </div>
         <div class="form-group">
-          <label for="exampleInputPassword1">Name</label>
-          <input name = "name" class="form-control"  placeholder="Password" value="{{ old('name') }}">
+          <label for= "name">Name</label>
+          <input name = "name" class="form-control"  placeholder="Name" value="{{ old('name') }}">
         </div>
         <div class="form-group">
           <label for="exampleInputPassword1">Message</label>
-          <textarea name= "msg" class="form-control" rows="5" id="comment" value="{{ old('msg') }}"></textarea>
+          <textarea name= "msg"  placeholder="Message" class="form-control" rows="5" id="comment" value="{{ old('msg') }}"></textarea>
           <button type="submit" class="btn btn-primary">Submit</button>
         </div>
       </form>
