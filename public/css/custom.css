@@ -128,8 +128,17 @@ body {
     }
 
     .trickTitle {
-        font-size: 17px !important;
+        font-size: 22px !important;
     }
+
+    .trickList a {
+        font-size: 20px;
+    }
+
+    .trickList li {
+        margin-bottom: 20px;
+    }
+
 
     .hide {
         display: none;
@@ -146,12 +155,18 @@ body {
     }
 
     h1 {
-        font-size: 25px !important;
+        font-size: 30px !important;
     }
 
     .jumbotron .lead {
-        font-size: 14px;
+        font-size: 18px;
     }
+
+    .fa-navicon {
+        font-size: 30px;
+    }
+
+
 
 
    
