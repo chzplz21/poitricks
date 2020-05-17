@@ -18,6 +18,16 @@
     <meta name="description" content="Poi Tricks Video Lessons">
     <meta name="keywords" content="poi, tricks, lessons, tutorials, videos">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-166930523-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-166930523-1');
+    </script>
+
 
 </head>
 
