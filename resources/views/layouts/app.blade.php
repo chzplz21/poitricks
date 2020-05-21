@@ -28,6 +28,8 @@
       gtag('config', 'UA-166930523-1');
     </script>
 
+    <script data-ad-client="ca-pub-8443257712574491" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
 
 </head>
 
